@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "xiaozhi-blue",
+  "name": "小智 AI · 智蓝",
+  "version": "1.0.0",
+  "author": "30925766",
+  "appearance": "dark",
+  "accent": "#3b82f6",
+  "palette": {
+    "accent": "#3b82f6"
+  },
+  "colors": {
+    "background": "#0b1220",
+    "panel": "#111c30",
+    "panelAlt": "#18263d",
+    "accent": "#3b82f6",
+    "accentAlt": "#60a5fa",
+    "text": "#f1f5f9",
+    "muted": "#94a3b8",
+    "line": "#334155"
+  },
+  "art": {
+    "safeArea": "none",
+    "taskMode": "off"
+  }
+}

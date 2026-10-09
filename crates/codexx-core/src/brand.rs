@@ -1,0 +1,14 @@
+pub const PRODUCT_NAME: &str = "小智助手";
+pub const WINDOW_TITLE: &str = PRODUCT_NAME;
+pub const APP_BUNDLE_NAME: &str = PRODUCT_NAME;
+pub const APP_BUNDLE_FILE_NAME: &str = "小智助手.app";
+pub const WINDOWS_SHORTCUT_NAME: &str = "小智助手.lnk";
+pub const LEGACY_MANAGER_APP_NAME: &str = "CodexX Manager";
+pub const LAUNCHER_BINARY: &str = "codexgo";
+pub const MANAGER_BINARY: &str = "codexgo-manager";
+pub const GITHUB_REPO: &str = "30925766/xiaozhiai";
+pub const GITHUB_URL: &str = "https://github.com/30925766/xiaozhiai";
+pub const QUICK_PROVIDER_NAME: &str = "XZ_Ai";
+pub const OFFICIAL_RELAY_NAME: &str = "xzapi.xiaozhiagent.cn";
+pub const OFFICIAL_RELAY_URL: &str = "https://xzapi.xiaozhiagent.cn";
+pub const OFFICIAL_RELAY_BASE_URL: &str = "https://xzapi.xiaozhiagent.cn/v1";
