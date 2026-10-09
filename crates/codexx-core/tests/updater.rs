@@ -28,8 +28,8 @@ fn github_payload_selects_platform_installer() {
         "assets": [
             {"name": "source.zip", "browser_download_url": "https://example.test/source.zip"},
             {"name": "codexx-manager.exe", "browser_download_url": "https://example.test/manager.exe"},
-            {"name": "小智助手-1.0.9-windows-x64-setup.exe", "browser_download_url": "https://example.test/setup.exe"},
-            {"name": "小智助手-1.0.9-macos-x64.dmg", "browser_download_url": "https://example.test/app.dmg"}
+            {"name": "xiaozhiai-1.0.9-windows-x64-setup.exe", "browser_download_url": "https://example.test/setup.exe"},
+            {"name": "xiaozhiai-1.0.9-macos-x64.dmg", "browser_download_url": "https://example.test/app.dmg"}
         ]
     }))
     .unwrap();
@@ -38,12 +38,12 @@ fn github_payload_selects_platform_installer() {
     if cfg!(windows) {
         assert_eq!(
             release.asset_name.as_deref(),
-            Some("小智助手-1.0.9-windows-x64-setup.exe")
+            Some("xiaozhiai-1.0.9-windows-x64-setup.exe")
         );
     } else if cfg!(target_os = "macos") {
         assert_eq!(
             release.asset_name.as_deref(),
-            Some("小智助手-1.0.9-macos-x64.dmg")
+            Some("xiaozhiai-1.0.9-macos-x64.dmg")
         );
     } else {
         assert_eq!(release.asset_name.as_deref(), None);
@@ -58,8 +58,8 @@ fn latest_json_payload_selects_platform_installer_without_github_api_shape() {
         "body": "静态更新描述",
         "assets": [
             {"name": "source.zip", "url": "https://example.test/source.zip"},
-            {"name": "小智助手-1.1.6-windows-x64-setup.exe", "url": "https://example.test/setup.exe"},
-            {"name": "小智助手-1.1.6-macos-x64.dmg", "url": "https://example.test/app.dmg"}
+            {"name": "xiaozhiai-1.1.6-windows-x64-setup.exe", "url": "https://example.test/setup.exe"},
+            {"name": "xiaozhiai-1.1.6-macos-x64.dmg", "url": "https://example.test/app.dmg"}
         ]
     }))
     .unwrap();
@@ -69,12 +69,12 @@ fn latest_json_payload_selects_platform_installer_without_github_api_shape() {
     if cfg!(windows) {
         assert_eq!(
             release.asset_name.as_deref(),
-            Some("小智助手-1.1.6-windows-x64-setup.exe")
+            Some("xiaozhiai-1.1.6-windows-x64-setup.exe")
         );
     } else if cfg!(target_os = "macos") {
         assert_eq!(
             release.asset_name.as_deref(),
-            Some("小智助手-1.1.6-macos-x64.dmg")
+            Some("xiaozhiai-1.1.6-macos-x64.dmg")
         );
     } else {
         assert_eq!(release.asset_name.as_deref(), None);
@@ -93,21 +93,21 @@ fn asset_selection_prefers_current_platform_artifacts() {
             "https://example.test/manager.exe".to_string(),
         ),
         (
-            "小智助手-1.0.9-windows-x64-setup.exe".to_string(),
+            "xiaozhiai-1.0.9-windows-x64-setup.exe".to_string(),
             "https://example.test/setup.exe".to_string(),
         ),
         (
-            "小智助手-1.0.9-macos-x64.dmg".to_string(),
+            "xiaozhiai-1.0.9-macos-x64.dmg".to_string(),
             "https://example.test/app.dmg".to_string(),
         ),
     ];
 
     if cfg!(windows) {
         let selected = select_update_asset(&assets).unwrap();
-        assert_eq!(selected.name, "小智助手-1.0.9-windows-x64-setup.exe");
+        assert_eq!(selected.name, "xiaozhiai-1.0.9-windows-x64-setup.exe");
     } else if cfg!(target_os = "macos") {
         let selected = select_update_asset(&assets).unwrap();
-        assert_eq!(selected.name, "小智助手-1.0.9-macos-x64.dmg");
+        assert_eq!(selected.name, "xiaozhiai-1.0.9-macos-x64.dmg");
     } else {
         assert!(select_update_asset(&assets).is_none());
     }
@@ -123,11 +123,11 @@ fn asset_selection_prefers_native_macos_architecture_when_wrong_arch_is_first() 
     let other_arch = if native_arch == "x64" { "arm64" } else { "x64" };
     let assets = vec![
         (
-            format!("小智助手-1.0.9-macos-{other_arch}.dmg"),
+            format!("xiaozhiai-1.0.9-macos-{other_arch}.dmg"),
             "https://example.test/wrong-arch.dmg".to_string(),
         ),
         (
-            format!("小智助手-1.0.9-macos-{native_arch}.dmg"),
+            format!("xiaozhiai-1.0.9-macos-{native_arch}.dmg"),
             "https://example.test/native-arch.dmg".to_string(),
         ),
     ];
@@ -191,10 +191,10 @@ fn downloaded_installer_accepts_current_platform_package() {
 
 fn platform_installer_name() -> &'static str {
     if cfg!(windows) {
-        "小智助手-test-windows-x64-setup.exe"
+        "xiaozhiai-test-windows-x64-setup.exe"
     } else if cfg!(target_os = "macos") {
-        "小智助手-test-macos-arm64.dmg"
+        "xiaozhiai-test-macos-arm64.dmg"
     } else {
-        "小智助手-test-installer.bin"
+        "xiaozhiai-test-installer.bin"
     }
 }

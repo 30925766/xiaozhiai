@@ -7,7 +7,7 @@
 !define ROOT "..\..\.."
 
 Name "小智助手"
-OutFile "${ROOT}\dist\windows\小智助手-${VERSION}-windows-x64-setup.exe"
+OutFile "${ROOT}\dist\windows\xiaozhiai-${VERSION}-windows-x64-setup.exe"
 InstallDir "$LOCALAPPDATA\Programs\小智助手"
 InstallDirRegKey HKCU "Software\小智助手" "InstallDir"
 RequestExecutionLevel admin

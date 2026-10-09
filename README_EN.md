@@ -21,9 +21,9 @@
 
 Download the latest installer from [GitHub Releases](https://github.com/30925766/xiaozhiai/releases):
 
-- Windows: `小智助手-*-windows-x64-setup.exe`
-- macOS Apple Silicon: `小智助手-*-macos-arm64.dmg`
-- macOS Intel: `小智助手-*-macos-x64.dmg`
+- Windows: `xiaozhiai-*-windows-x64-setup.exe`
+- macOS Apple Silicon: `xiaozhiai-*-macos-arm64.dmg`
+- macOS Intel: `xiaozhiai-*-macos-x64.dmg`
 
 After installation, open `小智助手`:
 

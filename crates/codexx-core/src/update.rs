@@ -395,7 +395,7 @@ fn is_macos_native_arch_asset(name: &str) -> bool {
 }
 
 fn is_windows_installer_asset(name: &str) -> bool {
-    (name.contains("小智助手") || name.contains("codexgo") || name.contains("codex-go"))
+    (name.contains("xiaozhiai") || name.contains("小智助手") || name.contains("codexgo") || name.contains("codex-go"))
         && (name.ends_with(".msi")
             || name.ends_with("-setup.exe")
             || name.ends_with("_setup.exe")
@@ -404,7 +404,7 @@ fn is_windows_installer_asset(name: &str) -> bool {
 }
 
 fn is_macos_installer_asset(name: &str) -> bool {
-    (name.contains("小智助手") || name.contains("codexgo") || name.contains("codex-go")) && name.ends_with(".dmg")
+    (name.contains("xiaozhiai") || name.contains("小智助手") || name.contains("codexgo") || name.contains("codex-go")) && name.ends_with(".dmg")
 }
 
 pub fn launch_installer(path: &Path) -> anyhow::Result<()> {

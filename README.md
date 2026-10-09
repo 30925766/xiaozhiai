@@ -21,9 +21,9 @@
 
 从 [GitHub Releases](https://github.com/30925766/xiaozhiai/releases) 下载最新版安装包：
 
-- Windows：`小智助手-*-windows-x64-setup.exe`
-- macOS Apple Silicon：`小智助手-*-macos-arm64.dmg`
-- macOS Intel：`小智助手-*-macos-x64.dmg`
+- Windows：`xiaozhiai-*-windows-x64-setup.exe`
+- macOS Apple Silicon：`xiaozhiai-*-macos-arm64.dmg`
+- macOS Intel：`xiaozhiai-*-macos-x64.dmg`
 
 安装后双击 `小智助手`：
 
